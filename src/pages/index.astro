@@ -1,9 +1,10 @@
 ---
+import "../styles/global.css"
 import Landing from '../components/Landing.tsx';
 import Layout from '../layouts/Layout.astro';
 
 ---
 
 <Layout>
-	<Landing />
+	<Landing client:load/>
 </Layout>
