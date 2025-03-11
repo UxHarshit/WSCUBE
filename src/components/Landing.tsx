@@ -3,7 +3,7 @@ import { AchievementBanner } from "./achivement-banner";
 import { DashboardStats } from "./dashboard-stats";
 import { LearningPath } from "./learning-path";
 import { RecommendedCourses } from "./recommended-course";
-import { DailyChallenge } from "./daily-chalange";
+import { DailyChallenge } from "./daily-challenge";
 import { LearningInsights } from "./learning-insights";
 export default function Landing() {
     return (
