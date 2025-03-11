@@ -103,9 +103,9 @@ export default function CoursesPage() {
               <a href="/challenges" className="text-muted-foreground hover:text-foreground transition-colors">
                 Challenges
               </a>
-              <a href="/community" className="text-muted-foreground hover:text-foreground transition-colors">
+              {/* <a href="/community" className="text-muted-foreground hover:text-foreground transition-colors">
                 Community
-              </a>
+              </a> */}
             </nav>
           </div>
           <div className="flex items-center gap-4">
