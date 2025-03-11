@@ -5,6 +5,8 @@ import { LearningPath } from "./learning-path";
 import { RecommendedCourses } from "./recommended-course";
 import { DailyChallenge } from "./daily-challenge";
 import { LearningInsights } from "./learning-insights";
+import WScubeLogo from "../assets/wscube-logo.svg?url"
+
 export default function Landing() {
     return (
         <div className="min-h-screen flex flex-col w-full bg-background">
@@ -12,9 +14,8 @@ export default function Landing() {
                 <div className="flex h-16 items-center justify-between px-4  ">
                     <div className="flex items-center gap-6">
                         <a href="/" className="flex items-center gap-2">
-                            <img className="object-contain "
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvxpW3pGLpn7Ebs_Thx4KuK97WMXdnPysYSvhigTyKKiYXL7EX1cuGgnmp3Gt0cLgpUo&usqp=CAU" width={32} height={32} alt="WSCube" />
-                            <span className="font-bold text-xl">WSCube</span>
+                            <img className="object-contain w-[8vw]"
+                                src={WScubeLogo} width={32} height={32} alt="WSCube" />
                         </a>
                         <nav className="hidden md:flex items-center gap-6">
                             <a href="/courses" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -26,9 +27,9 @@ export default function Landing() {
                             <a href="/challenges" className="text-muted-foreground hover:text-foreground transition-colors">
                                 Challenges
                             </a>
-                            <a href="/community" className="text-muted-foreground hover:text-foreground transition-colors">
+                            {/* <a href="/community" className="text-muted-foreground hover:text-foreground transition-colors">
                                 Community
-                            </a>
+                            </a> */}
                         </nav>
                     </div>
                     <div className="flex items-center gap-4">

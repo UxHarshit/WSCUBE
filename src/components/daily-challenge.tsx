@@ -44,9 +44,11 @@ export function DailyChallenge() {
                 </div>
             </CardContent>
             <CardFooter>
-                <Button className="w-full" variant={completed ? "outline" : "default"} onClick={() => setCompleted(!completed)}>
-                    {completed ? "Completed" : "Start Challenge"}
-                </Button>
+                <a href="">
+                    <Button className="w-full" variant={completed ? "outline" : "default"} onClick={() => setCompleted(!completed)}>
+                        {completed ? "Completed" : "Start Challenge"}
+                    </Button>
+                </a>
             </CardFooter>
         </Card>
     )

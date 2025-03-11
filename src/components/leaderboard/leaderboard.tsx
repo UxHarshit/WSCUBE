@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
+import WScubeLogo from "../../assets/wscube-logo.svg?url"
 
 export default function LeaderboardPage() {
   const leaderboardPeriods = ["Weekly", "Monthly", "All Time"]
@@ -125,10 +126,8 @@ export default function LeaderboardPage() {
         <div className="container flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-6">
             <a href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">WS</span>
-              </div>
-              <span className="font-bold text-xl">WSCube</span>
+              <img className="object-contain w-[8vw]"
+                src={WScubeLogo} width={32} height={32} alt="WSCube" />
             </a>
             <nav className="hidden md:flex items-center gap-6">
               <a href="/courses" className="text-muted-foreground hover:text-foreground transition-colors">
