@@ -10,7 +10,7 @@ export default function LeaderboardPage() {
   const users = [
     {
       id: 1,
-      name: "Alex Johnson",
+      name: "Harshit Katheria",
       image: "/placeholder.svg?height=40&width=40",
       points: 3450,
       level: 18,
@@ -21,7 +21,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 2,
-      name: "Maria Garcia",
+      name: "Ashutosh Maurya",
       image: "/placeholder.svg?height=40&width=40",
       points: 3280,
       level: 17,
@@ -32,7 +32,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 3,
-      name: "James Smith",
+      name: "Ayush Kesarwani",
       image: "/placeholder.svg?height=40&width=40",
       points: 3150,
       level: 16,
@@ -43,7 +43,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 4,
-      name: "Sarah Johnson",
+      name: "Om Sharma",
       image: "/placeholder.svg?height=40&width=40",
       points: 2450,
       level: 12,
@@ -54,7 +54,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 5,
-      name: "David Lee",
+      name: "Akshay Saini",
       image: "/placeholder.svg?height=40&width=40",
       points: 2320,
       level: 11,
@@ -65,7 +65,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 6,
-      name: "Emily Chen",
+      name: "Lakshay Saini",
       image: "/placeholder.svg?height=40&width=40",
       points: 2180,
       level: 10,
@@ -76,7 +76,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 7,
-      name: "Michael Brown",
+      name: "Rishabh Bharadwaj",
       image: "/placeholder.svg?height=40&width=40",
       points: 2050,
       level: 9,
@@ -87,7 +87,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 8,
-      name: "Jessica Wilson",
+      name: "Aman Kumar Sharma",
       image: "/placeholder.svg?height=40&width=40",
       points: 1920,
       level: 8,
@@ -98,7 +98,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 9,
-      name: "Robert Taylor",
+      name: "Ritik Kumar",
       image: "/placeholder.svg?height=40&width=40",
       points: 1780,
       level: 7,
@@ -109,7 +109,7 @@ export default function LeaderboardPage() {
     },
     {
       id: 10,
-      name: "Amanda Martinez",
+      name: "Rishabh Yadav",
       image: "/placeholder.svg?height=40&width=40",
       points: 1650,
       level: 6,
@@ -123,7 +123,7 @@ export default function LeaderboardPage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b">
-        <div className="container flex h-16 items-center justify-between px-4">
+        <div className="flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-6">
             <a href="/" className="flex items-center gap-2">
               <img className="object-contain w-[8vw]"
@@ -145,14 +145,14 @@ export default function LeaderboardPage() {
             </nav>
           </div>
           <div className="flex items-center gap-4">
-            <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors">
               Back to Dashboard
             </a>
           </div>
         </div>
       </header>
 
-      <main className="container px-4 py-6">
+      <main className="flex flex-col px-4 py-6">
         <div className="mb-6">
           <h1 className="text-3xl font-bold">Leaderboard</h1>
           <p className="text-muted-foreground">See how you rank against other learners</p>
