@@ -4,13 +4,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
+import WScubeLogo from "../../assets/wscube-logo.svg?url"
+import imgAward from "../../assets/award.jpg?url"
 
 export default function ProfilePage() {
   const profileTabs = ["Overview", "Achievements", "Learning Path", "Stats"]
 
   const user = {
-    name: "Sarah Johnson",
-    email: "sarah.j@example.com",
+    name: "Ayush Kesarwani",
+    email: "ayushkesarwani@gmail.com",
     image: "/placeholder.svg?height=100&width=100",
     level: 12,
     points: 2450,
@@ -30,7 +32,7 @@ export default function ProfilePage() {
       id: 1,
       name: "Fast Learner",
       description: "Completed 5 courses in the first month",
-      image: "/placeholder.svg?height=60&width=60",
+      image: "imgAward",
       earned: "April 2023",
     },
     {
@@ -100,13 +102,11 @@ export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b">
-        <div className="container flex h-16 items-center justify-between px-4">
+        <div className=" flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-6">
             <a href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">WS</span>
-              </div>
-              <span className="font-bold text-xl">WSCube</span>
+              <img className="object-contain w-[8vw]"
+                src={WScubeLogo} width={32} height={32} alt="WSCube" />
             </a>
             <nav className="hidden md:flex items-center gap-6">
               <a href="/courses" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -124,14 +124,14 @@ export default function ProfilePage() {
             </nav>
           </div>
           <div className="flex items-center gap-4">
-            <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors">
               Back to Dashboard
             </a>
           </div>
         </div>
       </header>
 
-      <main className="container px-4 py-6">
+      <main className=" px-4 py-6">
         <div className="mb-6">
           <Card>
             <CardContent className="p-6">
@@ -299,7 +299,7 @@ export default function ProfilePage() {
                     {badges.slice(0, 3).map((badge) => (
                       <div key={badge.id} className="flex items-center gap-3">
                         <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                          <img src={"https://placehold.co/600x400"} alt={badge.name} className="h-8 w-8" />
+                          <img src={imgAward} alt={badge.name} className="h-8 w-8" />
                         </div>
                         <div className="flex-1">
                           <h4 className="font-medium">{badge.name}</h4>
@@ -331,7 +331,7 @@ export default function ProfilePage() {
                       className="flex flex-col items-center text-center p-4 rounded-lg border hover:bg-accent transition-colors"
                     >
                       <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-3">
-                        <img src={badge.image || "/placeholder.svg"} alt={badge.name} className="h-10 w-10" />
+                        <img src={imgAward} alt={badge.name} className="h-10 w-10" />
                       </div>
                       <h4 className="font-medium">{badge.name}</h4>
                       <p className="text-xs text-muted-foreground mt-1">{badge.description}</p>
@@ -432,13 +432,12 @@ export default function ProfilePage() {
                     <div key={module.id} className="flex items-start mb-8 last:mb-0">
                       <div className="flex flex-col items-center mr-4">
                         <div
-                          className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium ${
-                            module.status === "completed"
-                              ? "bg-primary text-primary-foreground"
-                              : module.status === "in-progress"
-                                ? "bg-primary/20 text-primary border-2 border-primary"
-                                : "bg-muted text-muted-foreground"
-                          }`}
+                          className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium ${module.status === "completed"
+                            ? "bg-primary text-primary-foreground"
+                            : module.status === "in-progress"
+                              ? "bg-primary/20 text-primary border-2 border-primary"
+                              : "bg-muted text-muted-foreground"
+                            }`}
                         >
                           {module.status === "completed" ? (
                             <svg
@@ -536,9 +535,8 @@ export default function ProfilePage() {
                         <h4 className="text-sm text-muted-foreground">{stat.title}</h4>
                         <div className="text-2xl font-bold mt-1">{stat.value}</div>
                         <div
-                          className={`flex items-center gap-1 mt-1 text-xs ${
-                            stat.trend === "up" ? "text-green-500" : "text-red-500"
-                          }`}
+                          className={`flex items-center gap-1 mt-1 text-xs ${stat.trend === "up" ? "text-green-500" : "text-red-500"
+                            }`}
                         >
                           {stat.trend === "up" ? (
                             <svg

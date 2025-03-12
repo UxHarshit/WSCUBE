@@ -138,7 +138,7 @@ export default function ChallengesPage() {
             </nav>
           </div>
           <div className="flex items-center gap-4">
-            <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors">
               Back to Dashboard
             </a>
           </div>
@@ -163,7 +163,7 @@ export default function ChallengesPage() {
 
           {challengeTypes.map((type) => (
             <TabsContent key={type} value={type}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {challenges
                   .filter((challenge) => challenge.type === type)
                   .map((challenge) => (

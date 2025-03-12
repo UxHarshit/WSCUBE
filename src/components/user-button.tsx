@@ -13,8 +13,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export function UserButton() {
   const [user] = useState({
-    name: "Your Name",
-    email: "sarah.j@example.com",
+    name: "AYUSH KESARWANI",
+    email: "ayushkesarwani299@gmail.com",
     level: 12,
     points: 2450,
     image: "/placeholder.svg?height=40&width=40",
@@ -26,7 +26,7 @@ export function UserButton() {
         <button className="flex items-center gap-2 rounded-full border p-1 pr-4 hover:bg-accent transition-colors">
           <Avatar className="h-8 w-8">
             <AvatarImage src={user.image} alt={user.name} />
-            <AvatarFallback>SJ</AvatarFallback>
+            <AvatarFallback>AK</AvatarFallback>
           </Avatar>
           <div className="flex flex-col text-left">
             <span className="text-sm font-medium">{user.name}</span>

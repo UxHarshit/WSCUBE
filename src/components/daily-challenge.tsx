@@ -44,11 +44,14 @@ export function DailyChallenge() {
                 </div>
             </CardContent>
             <CardFooter>
-                <a href="">
-                    <Button className="w-full" variant={completed ? "outline" : "default"} onClick={() => setCompleted(!completed)}>
-                        {completed ? "Completed" : "Start Challenge"}
-                    </Button>
-                </a>
+                
+                <Button className="w-full cursor-pointer " variant={completed ? "outline" : "default"} onClick={() => {
+                    window.location.href = "/learn"
+                    setCompleted(!completed)
+                }}>
+                    {completed ? "Completed" : "Start Challenge"}
+                </Button>
+                
             </CardFooter>
         </Card>
     )
